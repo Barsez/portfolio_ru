@@ -85,11 +85,12 @@ body {
 
 .header {
     background: linear-gradient(to right, #000, #292929, #000);
-   
+
     .container {
         padding: 20px 10px;
         position: relative;
         height: 100px;
+
         .nav_row {
             // perspective: 500px;
             display: flex;
@@ -155,7 +156,7 @@ body {
     }
 }
 
-.mobile_menu {     
+.mobile_menu {
     position: absolute;
     padding: 0 10px;
     top: 100px;
@@ -164,7 +165,8 @@ body {
     width: 100%;
     display: flex;
     opacity: 0;
-    z-index: 100;       
+    z-index: 100;
+
     .mobile_menu_list {
         width: 100%;
         display: flex;
@@ -173,7 +175,7 @@ body {
         font-size: 16px;
         text-transform: uppercase;
     }
-    
+
 }
 
 .menu_mobile_img {
@@ -218,7 +220,7 @@ body {
         }
 
         .main_wrapper {
-            
+
             max-width: 700px;
             text-align: center;
             // transform: translateY(-50px);
@@ -235,6 +237,7 @@ body {
                 font-size: 60px;
                 line-height: 140%;
                 font-weight: 700;
+
                 span {
                     display: inline-block;
                 }
@@ -265,6 +268,7 @@ body {
                 @media(max-width: 600px) {
                     font-size: 18px;
                 }
+
                 @media(max-width: 430px) {
                     font-size: 14px;
                 }
@@ -392,6 +396,12 @@ body {
                         width: 100%;
                     }
 
+                    transition: box-shadow .2s linear;
+
+                    &:hover {
+                        box-shadow: 0 0 7px 2px #719eff;
+                    }
+
                     img {
                         display: block;
                         width: 100%;
@@ -429,6 +439,12 @@ body {
                     @media(max-width: 400px) {
                         width: 100%;
                     }
+                    transition: background-color .3s linear;
+
+                    &:hover {
+                        background-color: #646464;
+                        
+                    }
 
                     a {
                         transition: .2s linear;
@@ -444,17 +460,6 @@ body {
                         }
                     }
 
-                }
-
-                .project_title {
-                    background-color: $white_color;
-                    text-align: center;
-                    font-size: 24px;
-                    @include font($poppins, $medium);
-
-                    @media(max-width: 400px) {
-                        font-size: 20px;
-                    }
                 }
             }
 

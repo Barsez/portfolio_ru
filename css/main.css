@@ -1328,6 +1328,7 @@ body {
   overflow: hidden;
   width: 550px;
   height: 350px;
+  transition: box-shadow 0.2s linear;
 }
 @media (max-width: 900px) {
   .projects .projects_block .proj1 .project_card .project_image {
@@ -1340,6 +1341,9 @@ body {
     height: 240px;
     width: 100%;
   }
+}
+.projects .projects_block .proj1 .project_card .project_image:hover {
+  box-shadow: 0 0 7px 2px #719eff;
 }
 .projects .projects_block .proj1 .project_card .project_image img {
   display: block;
@@ -1366,6 +1370,7 @@ body {
   background-position: center;
   background-blend-mode: multiply;
   background-color: rgb(32, 32, 32);
+  transition: background-color 0.3s linear;
 }
 @media (max-width: 900px) {
   .projects .projects_block .proj1 .project_card .some_text {
@@ -1376,6 +1381,9 @@ body {
   .projects .projects_block .proj1 .project_card .some_text {
     width: 100%;
   }
+}
+.projects .projects_block .proj1 .project_card .some_text:hover {
+  background-color: #646464;
 }
 .projects .projects_block .proj1 .project_card .some_text a {
   transition: 0.2s linear;
@@ -1388,19 +1396,6 @@ body {
 .projects .projects_block .proj1 .project_card .some_text a:hover {
   transform: scale(1.05);
   opacity: 1;
-}
-.projects .projects_block .proj1 .project_card .project_title {
-  background-color: #fff;
-  text-align: center;
-  font-size: 24px;
-  font-family: "Poppins";
-  font-weight: 500;
-  color: #171718;
-}
-@media (max-width: 400px) {
-  .projects .projects_block .proj1 .project_card .project_title {
-    font-size: 20px;
-  }
 }
 .projects .projects_block .proj1 .proj_description {
   max-width: 500px;

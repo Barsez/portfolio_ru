@@ -189,8 +189,8 @@ window.onload = () => {
     observe_all(proj_text5, targ_text5, '#proj_description5', options, 'project2_animation');
     let proj_text6, targ_text6;
     observe_all(proj_text6, targ_text6, '#proj_description6', options, 'project1_animation');
-    // let proj_text7, targ_text7;
-    // observe_all(proj_text7, targ_text7, '#proj_description7', options, 'project2_animation');
+    let proj_text7, targ_text7;
+    observe_all(proj_text7, targ_text7, '#proj_description7', options, 'project2_animation');
 
 
     let skills_title_obs, target_skills;
