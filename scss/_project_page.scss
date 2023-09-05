@@ -26,6 +26,24 @@
             width: 400px;
             opacity: .8;
             transition: all 1s ease;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .arrow_left,
+            .arrow_right {
+                img {
+                    height: 100%;
+                }
+                height: 200px;
+                width: 200px;
+                animation: opacity_change_infinite 5s linear infinite;
+                
+            }
+            .arrow_left {
+                transform: rotate(180deg);
+            }
+
             &:hover {
                 transform: rotateY(0);
                 opacity: 1;
@@ -93,7 +111,6 @@
                 } 
             }
         }
-       
 
         .proj_slider_right {
             transform: rotateY(-10deg);

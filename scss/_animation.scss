@@ -472,13 +472,6 @@
     }
 }
 
-// @keyframes rotate_sun {
-//     0% {}
-//     100% {
-//         transform: rotate(360deg);
-//     }
-// }
-
 .dark_mode_btn--active {
     background-color: #fff;
 }
@@ -487,11 +480,6 @@
     background: linear-gradient(to right, #000000, #292929, #000);
     @include font ($gentium, $regular, $white_color);
 }
-
-
-
-
-
 
 .main.main_dark {
     background-blend-mode: multiply;
@@ -566,4 +554,20 @@
 .contacts_title,
 .about_title {
     animation: proj_anim 1s 1s ease-out forwards;
+}
+
+
+// project page
+
+@keyframes opacity_change_infinite {
+    0% {
+        opacity: .1;
+    }
+    50% {
+        opacity: .5;
+        
+    }
+    100% {
+        opacity: .1;
+    }
 }
