@@ -1,0 +1,98 @@
+.contacts {
+    padding: 60px 0 100px;
+    .contacts_title {
+        text-align: center;
+        margin-bottom: 60px;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $blue_color;
+        letter-spacing: 2.5px;
+        @media (max-width: 800px) {
+            font-size: 40px;
+        }
+        @media (max-width: 600px) {
+            font-size: 30px;
+            line-height: 1.2;
+        }
+    }
+
+    .contacts_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        max-width: 350px;
+        margin: 0 auto;
+        @media(max-width: 600px) {
+            max-width: 270px;
+        }
+
+        .location,
+        .telegram,
+        .mail_title {
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-weight: $bold;
+            position: relative;
+            transition: .2s linear;
+            color: $blue_color;
+            opacity: .6;
+            &:hover {
+                opacity: 1;
+            }
+            
+            @media(max-width: 600px) {
+                font-size: 28px;
+            }
+        }
+        
+        .mail_title {
+            margin-bottom: 10px;
+            
+        }
+
+        .location_text,
+        .phone,
+        .mail_text {
+            text-align: center;
+            font-weight: $bold;
+            margin: 10px 0 30px;
+            transition: all .2s linear;
+            font-size: 24px;
+            transition: .2s ease-out;
+            position: relative;
+            img {
+                position: absolute;
+                right: -30px;
+                top: 20%;
+                opacity: 0;
+                height: 30px; 
+                transition: all .2s linear;
+            }
+
+            &:hover img {
+                opacity: 1;
+                transform: translateX(30px);
+            }
+            &:hover {
+                color: red;
+                transform: scale(1.1);
+            }
+            
+            
+            @media(max-width: 600px) {
+                font-size: 18px;
+            }
+        }
+        
+        .mail_text {
+            margin: 0;
+        }
+        
+
+
+    }
+
+}

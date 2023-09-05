@@ -1,0 +1,568 @@
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        display: block;
+        width: 100px;
+        height: 100px;
+        animation: rotate_infinite 2s linear infinite;
+    }
+}
+
+@keyframes rotate_infinite {
+    0% {}
+
+    100% {
+        transform: rotateY(360deg);
+
+    }
+}
+
+.preloader_hide {
+    animation: isVisible .5s linear forwards;
+}
+
+@keyframes isVisible {
+    0% {}
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 0;
+        // opacity: 0;
+    }
+}
+
+
+
+// logo
+
+.logo {
+    animation: logo_active_filter 5s linear infinite;
+}
+
+.logo_active {
+    animation: logo_rotate 1s ease forwards;
+}
+
+// menu mobile
+
+.menu_mobile_scale {
+    animation: scale_15 0.2s linear forwards;
+
+}
+
+@keyframes scale_15 {
+    0% {}
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {}
+}
+
+.display_block {
+    animation: menu_anim .5s linear forwards;
+}
+
+@keyframes menu_anim {
+    0% {}
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        height: 60px;
+        opacity: 1;
+    }
+}
+
+
+@keyframes logo_active_filter {
+    25% {}
+
+    50% {
+        filter: blur(3px);
+        color: $blue_color;
+    }
+
+    75% {
+
+        filter: blur(20px);
+    }
+
+    100% {}
+}
+
+@keyframes logo_rotate {
+    0% {}
+
+    25% {
+        transform: rotateX(360deg) rotateY(1deg) scale(2);
+    }
+
+    75% {
+        transform: rotateX(360deg) rotateY(1deg) scale(2);
+    }
+
+    100% {
+        transform: rotateX(720deg) rotateY(0deg);
+    }
+}
+
+
+// nav_list animation
+
+.nav_list_wrapper {
+    ul {
+        opacity: 0;
+        animation: animation_move_down 1s ease-out forwards;
+        li {
+            &:active {
+                top: 1px;
+            }
+            &:hover {  
+                animation: nav_li_shake 0.5s linear forwards;
+            }
+
+            @keyframes nav_li_shake {
+                0% {}
+
+                25% {
+                    transform: rotate(2deg) scale(1.1);
+                }
+
+                50% {
+                    transform: rotate(0deg) scale(1);
+                }
+
+                75% {
+                    transform: rotate(-2deg) scale(1.1);
+                }
+                100% {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+
+
+
+// nav_list underline
+
+.nav_list--active::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $blue_color;
+    bottom: -3px;
+}
+
+
+// main wrapper animation
+
+.main_wrapper {
+    opacity: 0;
+    animation: just_cont_action 2s 1s linear forwards;
+
+    @keyframes just_cont_action {
+        from {
+
+            filter: blur(30px);
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+}
+
+// main_text_active
+
+.main_text_active {
+    cursor: pointer;
+    animation: main_active 1s ease-out forwards;
+}
+
+@keyframes main_active {
+    50% {
+        filter: blur(1px);
+        opacity: .7;
+        color: $blue_color;
+    }
+
+    100% {
+        filter: blur(10px);
+        transform: translateY(250px) rotateX(360deg) rotateY(720deg);
+        opacity: 0;
+    }
+}
+
+
+// projects 
+
+
+.show_projects_side {
+    animation: proj_side 3s linear forwards;
+}
+
+@keyframes proj_side {
+    0% {
+        top: 300px;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+
+
+// card animation
+
+.card_back {
+    overflow: hidden;
+
+    .project_image {
+        animation: proj_image_anim 1s linear forwards;
+    }
+
+    #some_text {
+        transform: rotateY(180deg);
+        animation: card_back_anim 1s linear forwards;
+    }
+
+    .project_title {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes proj_image_anim {
+    0% {}
+
+    50% {
+        height: 350px;
+    }
+
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes card_back_anim {
+    0% {}
+
+    50% {
+        height: 0;
+    }
+
+    100% {
+        height: 350px;
+    }
+}
+
+.card_rotate_180_right {
+    transition: 1s linear;
+    transform: rotateY(-220deg);
+}
+
+.card_rotate_180_left {
+    transition: 1s linear;
+    transform: rotateY(220deg);
+}
+
+.card_rotate_360 {
+    transition: 1s linear;
+    transform: rotateY(0deg);
+}
+
+.project1_animation {
+    animation: proj_anim 1s ease-out forwards;
+
+    @media(max-width: 800px) {
+        animation: none;
+    }
+}
+
+.project2_animation {
+    animation: proj_anim2 1s ease-out forwards;
+
+    @media(max-width: 800px) {
+        animation: none;
+    }
+}
+
+@keyframes proj_anim {
+    0% {
+        transform: translateX(-280px);
+    }
+
+    75% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes proj_anim2 {
+    0% {
+        transform: translateX(280px);
+    }
+
+    75% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// skills
+
+.skills_left_trans {
+    animation: animation_move_down 1s ease-out forwards;
+}
+
+@keyframes animation_move_down {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+// sertificate
+
+
+.sert_title_animation {
+    animation: animation_move_down 1s ease-out forwards;
+}
+
+.sert_img_animation {
+    animation: rotate_720 1s linear forwards;
+
+    @media(max-width: 600px) {
+        animation: none;
+    }
+}
+
+@keyframes rotate_720 {
+    0% {
+        transform: rotate(720deg) scale(0);
+        filter: blur(20px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// pseudo line header
+.pseudo_line_header {
+    position: relative;
+
+}
+
+.pseudo_line_header::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: $blue_color;
+    animation: line 3s ease forwards;
+}
+
+
+// pseudo line footer
+.pseudo_line_footer {
+    position: relative;
+
+}
+
+.pseudo_line_footer::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    left: 0;
+    top: 0;
+    background-color: $blue_color;
+    animation: line 3s ease forwards;
+}
+
+@keyframes line {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+// dark mode
+.dark_mode_btn {
+    perspective: 300px;
+    width: 50px;
+    height: 50px;
+    background-color: $black_color;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .1s linear;
+    &:hover {
+        opacity: .7;
+    }
+    @media(max-width: 1200px) {
+        right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+    @media(max-width: 700px) {
+        width: 20px;
+        height: 20px;
+    }
+    
+
+    .dark_mode_text {
+        position: absolute;
+        color: $blue_color;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: bold;
+        top: -40px;
+        animation: rotate_infinite 7s 2s linear infinite;
+        @media(max-width: 600px) {
+            font-size: 12px;
+            top: -30px;
+        }
+    }
+
+    .dark_mode_btn_icon {
+        width: 40px;
+        z-index: 5;
+        @media(max-width: 600px) {
+            width: 16px;
+        }
+        
+    }
+}
+
+.dark_mode_btn--active {
+    background-color: #fff;
+}
+
+.dark_mode {
+    background: linear-gradient(to right, #000000, #292929, #000);
+    @include font ($gentium, $regular, $white_color);
+}
+
+
+
+
+
+
+.main.main_dark {
+    background-blend-mode: multiply;
+    background-color: #202020;
+}
+
+// ab_icon
+
+#ab_icon {
+    width: 70px;
+    position: fixed;
+    bottom: 100px;
+    left: 20px;
+    z-index: 10;
+    cursor: pointer;
+    transition: .2s linear;
+
+    @media(max-width: 1200px) {
+        width: 50px;
+        left: 10px;
+    }
+
+    @media(max-width: 700px) {
+        width: 20px;
+        left: 10px;
+    }
+}
+
+.ab_icon_rotate {
+    animation: iconRotate 1s forwards;
+}
+
+@keyframes iconRotate {
+    0% {}
+
+    100% {
+        transform: rotateY(360deg)
+    }
+}
+
+
+// heart animation
+
+.heartClass {
+    animation: heartBeat 1s ease forwards;
+}
+
+@keyframes heartBeat {
+    0% {
+        width: 30px;
+    }
+
+    25% {
+        width: 25px;
+    }
+
+    50% {
+        width: 30px;
+    }
+
+    75% {
+        width: 25px;
+    }
+
+    100% {
+        width: 30px;
+    }
+}
+
+// contacts animation
+
+.contacts_title,
+.about_title {
+    animation: proj_anim 1s ease-out forwards;
+}
