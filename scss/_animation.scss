@@ -24,18 +24,11 @@
 
 @keyframes isVisible {
     0% {}
-
-    50% {
-        opacity: 1;
-    }
-
+    50% {}
     100% {
-        width: 0;
-        // opacity: 0;
+        height: 0;
     }
 }
-
-
 
 // logo
 

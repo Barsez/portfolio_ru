@@ -116,11 +116,8 @@ ul {
 }
 
 @keyframes isVisible {
-  50% {
-    opacity: 1;
-  }
   100% {
-    width: 0;
+    height: 0;
   }
 }
 .logo {
