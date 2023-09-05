@@ -10,7 +10,7 @@
             line-height: 130%;
             margin: 0 auto 120px;
             text-transform: uppercase;
-            opacity: 1;
+            opacity: 0;
             @include font($dmsans, $bold, $blue_color);
             @media(max-width: 1000px) {
                 transform: translateX(-400px);
