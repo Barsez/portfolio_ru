@@ -19,6 +19,7 @@ const proj_slider_left = document.querySelector('.proj_slider_left');
 const proj_slider_right = document.querySelector('.proj_slider_right');
 const projects_title = document.querySelector('.projects_title');
 const project_link = document.querySelector('.project_page_wrapper > a');
+const project_page_description = document.querySelector('.project_page_description');
 
 
 
@@ -98,7 +99,7 @@ const arrDescriptions = [
     'Мы предлагаем широкий спектр функций, включая возможность создания профиля, добавления друзей, обмен сообщениями, публикацию фотографий и видео, присоединение к группам и сообществам.',
 
     'Предлагаем широкий выбор телефонов Apple с различными моделями и конфигурациями. Мы специализируемся на продаже оригинальных устройств, предлагая клиентам высокое качество и надежность.',
-    
+
 ]
 
 const arrNameProject = [
@@ -134,6 +135,7 @@ function is_slider_project() {
     projects_title.textContent = Object.keys(arrNameProject[i]);
 
     project_link.href = Object.values(arrNameProject[i]);
+    project_page_description.textContent = arrDescriptions[i];
 
     // click 
     document.querySelector('.proj_slider_right').addEventListener('click', function () {
@@ -150,6 +152,7 @@ function is_slider_project() {
 
         projects_title.textContent = Object.keys(arrNameProject[i]);
         project_link.href = Object.values(arrNameProject[i]);
+        project_page_description.textContent = arrDescriptions[i];
 
         is_blur(proj_slider_right, 500);
         is_blur(proj_slider_left, 500);
@@ -170,6 +173,7 @@ function is_slider_project() {
 
         projects_title.textContent = Object.keys(arrNameProject[i]);
         project_link.href = Object.values(arrNameProject[i]);
+        project_page_description.textContent = arrDescriptions[i];
 
         is_blur(proj_slider_right, 500);
         is_blur(proj_slider_left, 500);
