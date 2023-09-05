@@ -13,6 +13,9 @@ const project_card = document.querySelector('.project_card');
 const proj_descriptions = document.querySelectorAll('.proj_description');
 const project_cards = document.querySelectorAll('.project_card');
 const menu_mobile_img = document.querySelector('.menu_mobile_img');
+const sun_mode = document.querySelector('.sun_mode');
+const moon_mode = document.querySelector('.moon_mode');
+
 
 const proj_slider_center = document.querySelector('.proj_slider_center');
 const proj_slider_left = document.querySelector('.proj_slider_left');
@@ -49,15 +52,21 @@ btnDarkMode.addEventListener('click', function () {
         body.classList.toggle('dark_mode');
 
         if (body.classList.contains('dark_mode')) {
-            localStorage.setItem('darkMode', 'dark')
+            localStorage.setItem('darkMode', 'dark');
+            moon_mode.style.display = 'block';
+            sun_mode.style.display = 'none';
         } else {
-            localStorage.setItem('darkMode', 'light')
+            localStorage.setItem('darkMode', 'light');
+            moon_mode.style.display = 'none';
+            sun_mode.style.display = 'block';
         }
     }, 100)
 })
 if (localStorage.getItem('darkMode') === 'dark') {
     body.classList.toggle('dark_mode');
     btnDarkMode.classList.add('dark_mode_btn--active');
+    moon_mode.style.display = 'block';
+    sun_mode.style.display = 'none';
 }
 
 
