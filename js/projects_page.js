@@ -84,7 +84,13 @@ document.querySelector('.heart_wrapper').addEventListener('click', function () {
 
 
 const arrProjectsPath = [
-    'img/proj_big/burger_proj.jpg', 'img/proj_big/aperture_proj.jpg', 'img/proj_big/concept_proj.jpg', 'img/proj_big/testspeed_proj.png','img/proj_big/freeapp_proj.png', 'img/proj_big/apple_proj.png'
+    'img/proj_big/burger_proj.jpg',
+    'img/proj_big/aperture_proj.jpg',
+    'img/proj_big/concept_proj.jpg',
+    'img/proj_big/testspeed_proj.png',
+    'img/proj_big/freeapp_proj.png',
+    'img/proj_big/apple_proj.png',
+    'img/proj_big/google.png',
 ];
 
 const arrDescriptions = [
@@ -100,25 +106,28 @@ const arrDescriptions = [
 
     'Предлагаем широкий выбор телефонов Apple с различными моделями и конфигурациями. Мы специализируемся на продаже оригинальных устройств, предлагая клиентам высокое качество и надежность.',
 
+    'Основными принципами Google являются доступность информации, удобство использования и инновационный подход к созданию новых продуктов и сервисов.'
+
 ]
 
 const arrNameProject = [
-    {'burger house': 'https://barsez.github.io/burger/'},
-    {'aperture studio': 'https://barsez.github.io/studio_aperture/'},
-    {'concept project': 'https://barsez.github.io/concept/'},
-    {'test speed writing': 'https://barsez.github.io/testspeedwriting/'},
-    {'freeapp': '#!'},
-    {'apple project': '#!'},
+    { 'burger house': 'https://barsez.github.io/burger/' },
+    { 'aperture studio': 'https://barsez.github.io/studio_aperture/' },
+    { 'concept project': 'https://barsez.github.io/concept/' },
+    { 'test speed writing': 'https://barsez.github.io/testspeedwriting/' },
+    { 'freeapp': '#!' },
+    { 'apple project': '#!' },
+    { 'google project': '#!' },
 ];
 
 
 
 function is_blur(target_name, timeout) {
     target_name.classList.add('slider_blur');
-        setTimeout(() => {
-            target_name.classList.remove('slider_blur');
-        }, timeout);
-} 
+    setTimeout(() => {
+        target_name.classList.remove('slider_blur');
+    }, timeout);
+}
 
 
 // slider
@@ -126,7 +135,7 @@ function is_blur(target_name, timeout) {
 function is_slider_project() {
     let i = 0;
     let j = 1;
-    let k = 5;
+    let k = 6;
 
     // start position
     proj_slider_center.style.backgroundImage = `url(${arrProjectsPath[i]})`;
