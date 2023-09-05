@@ -74,8 +74,8 @@ function is_span_target(el_name, name_animation, time_anim) {
     })
 }
 
-is_span_target(main_title, 'main_text_active', 3000);
-is_span_target(main_text, 'main_text_active', 3000);
+is_span_target(main_title, 'main_text_active', 4000);
+is_span_target(main_text, 'main_text_active', 4000);
 
 
 // logo_active
