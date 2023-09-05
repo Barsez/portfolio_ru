@@ -115,9 +115,9 @@ const arrNameProject = [
     { 'aperture studio': 'https://barsez.github.io/studio_aperture/' },
     { 'concept project': 'https://barsez.github.io/concept/' },
     { 'test speed writing': 'https://barsez.github.io/testspeedwriting/' },
-    { 'freeapp': '#!' },
+    { 'freeapp': 'https://barsez.github.io/free_app/' },
     { 'apple project': '#!' },
-    { 'google project': '#!' },
+    { 'google project': 'https://barsez.github.io/google_proj/' },
 ];
 
 
