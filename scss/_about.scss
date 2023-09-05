@@ -8,6 +8,7 @@
         font-weight: bold;
         color: $blue_color;
         letter-spacing: 2.5px;
+        opacity: 0;
         @media (max-width: 800px) {
             font-size: 40px;
         }
