@@ -672,6 +672,7 @@ ul {
   text-align: center;
   margin: 0 auto 60px;
   font-size: 28px;
+  font-weight: 700;
 }
 @media (max-width: 1100px) {
   .project_page_container .project_page_description {
