@@ -14,16 +14,7 @@
         display: block;
         width: 100px;
         height: 100px;
-        animation: rotate_infinite 2s linear infinite;
-    }
-}
-
-@keyframes rotate_infinite {
-    0% {}
-
-    100% {
-        transform: rotateY(360deg);
-
+        animation: iconRotate 2s linear infinite;
     }
 }
 
@@ -461,7 +452,7 @@
         line-height: 1;
         font-weight: bold;
         top: -40px;
-        animation: rotate_infinite 7s 2s linear infinite;
+        animation: iconRotate 7s 2s linear infinite;
         @media(max-width: 600px) {
             font-size: 12px;
             top: -30px;
@@ -474,7 +465,14 @@
         @media(max-width: 600px) {
             width: 16px;
         }
-        
+        animation: rotate_sun 20s linear infinite;  
+    }
+}
+
+@keyframes rotate_sun {
+    0% {}
+    100% {
+        transform: rotate(360deg);
     }
 }
 

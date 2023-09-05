@@ -108,14 +108,9 @@ ul {
   display: block;
   width: 100px;
   height: 100px;
-  animation: rotate_infinite 2s linear infinite;
+  animation: iconRotate 2s linear infinite;
 }
 
-@keyframes rotate_infinite {
-  100% {
-    transform: rotateY(360deg);
-  }
-}
 .preloader_hide {
   animation: isVisible 0.5s linear forwards;
 }
@@ -446,7 +441,7 @@ ul {
   line-height: 1;
   font-weight: bold;
   top: -40px;
-  animation: rotate_infinite 7s 2s linear infinite;
+  animation: iconRotate 7s 2s linear infinite;
 }
 @media (max-width: 600px) {
   .dark_mode_btn .dark_mode_text {
@@ -457,6 +452,7 @@ ul {
 .dark_mode_btn .dark_mode_btn_icon {
   width: 40px;
   z-index: 5;
+  animation: rotate_sun 20s linear infinite;
 }
 @media (max-width: 600px) {
   .dark_mode_btn .dark_mode_btn_icon {
@@ -464,6 +460,11 @@ ul {
   }
 }
 
+@keyframes rotate_sun {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .dark_mode_btn--active {
   background-color: #fff;
 }
