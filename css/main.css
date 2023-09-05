@@ -178,10 +178,6 @@ ul {
     transform: rotateX(720deg) rotateY(0deg);
   }
 }
-.nav_list_wrapper ul {
-  opacity: 0;
-  animation: animation_move_down 1s ease-out forwards;
-}
 .nav_list_wrapper ul li:active {
   top: 1px;
 }

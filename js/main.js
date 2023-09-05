@@ -122,11 +122,8 @@ if (localStorage.getItem('darkMode') === 'dark') {
     body.classList.toggle('dark_mode');
     btnDarkMode.classList.add('dark_mode_btn--active');
     main.classList.toggle('main_dark');
-    // document.querySelector('.projects').classList.toggle('dark_mode');
 }
-else {
-    // body.classList.remove('dark_mode');
-}
+
 
 
 
