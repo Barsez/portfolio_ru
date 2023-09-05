@@ -443,28 +443,30 @@ ul {
   top: -40px;
   animation: iconRotate 7s 2s linear infinite;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .dark_mode_btn .dark_mode_text {
-    font-size: 12px;
+    font-size: 10px;
     top: -30px;
   }
 }
 .dark_mode_btn .dark_mode_btn_icon {
   width: 40px;
   z-index: 5;
-  animation: rotate_sun 20s linear infinite;
 }
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
+  .dark_mode_btn .dark_mode_btn_icon {
+    width: 30px;
+  }
+}
+@media (max-width: 700px) {
   .dark_mode_btn .dark_mode_btn_icon {
     width: 16px;
   }
 }
-
-@keyframes rotate_sun {
-  100% {
-    transform: rotate(360deg);
-  }
+.dark_mode_btn .moon_mode {
+  display: none;
 }
+
 .dark_mode_btn--active {
   background-color: #fff;
 }

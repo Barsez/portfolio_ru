@@ -453,8 +453,8 @@
         font-weight: bold;
         top: -40px;
         animation: iconRotate 7s 2s linear infinite;
-        @media(max-width: 600px) {
-            font-size: 12px;
+        @media(max-width: 700px) {
+            font-size: 10px;
             top: -30px;
         }
     }
@@ -462,19 +462,25 @@
     .dark_mode_btn_icon {
         width: 40px;
         z-index: 5;
-        @media(max-width: 600px) {
+        @media(max-width: 1200px) {
+            width: 30px;
+        }
+        @media(max-width: 700px) {
             width: 16px;
         }
-        animation: rotate_sun 20s linear infinite;  
+        // animation: rotate_sun 20s linear infinite;  
+    }
+    .moon_mode {
+        display: none;
     }
 }
 
-@keyframes rotate_sun {
-    0% {}
-    100% {
-        transform: rotate(360deg);
-    }
-}
+// @keyframes rotate_sun {
+//     0% {}
+//     100% {
+//         transform: rotate(360deg);
+//     }
+// }
 
 .dark_mode_btn--active {
     background-color: #fff;

@@ -13,7 +13,8 @@ const project_card = document.querySelector('.project_card');
 const proj_descriptions = document.querySelectorAll('.proj_description');
 const project_cards = document.querySelectorAll('.project_card');
 const menu_mobile_img = document.querySelector('.menu_mobile_img');
-
+const sun_mode = document.querySelector('.sun_mode');
+const moon_mode = document.querySelector('.moon_mode');
 
 // preloader
 setTimeout(() => {
@@ -105,14 +106,19 @@ btnDarkMode.addEventListener('click', function () {
     document.querySelector('.preloader').classList.remove('preloader_hide')
     setTimeout(() => {
         document.querySelector('.preloader').classList.add('preloader_hide');
+
         this.classList.toggle('dark_mode_btn--active');
         body.classList.toggle('dark_mode');
         main.classList.toggle('main_dark');
 
         if (body.classList.contains('dark_mode')) {
-            localStorage.setItem('darkMode', 'dark')
+            localStorage.setItem('darkMode', 'dark');
+            moon_mode.style.display = 'block';
+            sun_mode.style.display = 'none';
         } else {
-            localStorage.setItem('darkMode', 'light')
+            localStorage.setItem('darkMode', 'light');
+            moon_mode.style.display = 'none';
+            sun_mode.style.display = 'block';
         }
     }, 200)
 
@@ -122,6 +128,8 @@ if (localStorage.getItem('darkMode') === 'dark') {
     body.classList.toggle('dark_mode');
     btnDarkMode.classList.add('dark_mode_btn--active');
     main.classList.toggle('main_dark');
+    moon_mode.style.display = 'block';
+    sun_mode.style.display = 'none';
 }
 
 
