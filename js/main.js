@@ -133,16 +133,19 @@ if (localStorage.getItem('darkMode') === 'dark') {
 }
 
 
+// btn load more
+function is_load_more_profects() {
+    let i = 0;
+    btn_load_more.addEventListener('click', function load_more() {
+        cards_opts[i].style.display = 'flex';
+        i++;
+        if (i >= cards_opts.length) {
+            btn_load_more.removeEventListener('click', load_more);
+        }
+    })
+};
+is_load_more_profects();
 
-
-let i = 0;
-btn_load_more.addEventListener('click', function load_more() {
-    cards_opts[i].style.display = 'flex';
-    i++;
-    if (i >= cards_opts.length) {
-        btn_load_more.removeEventListener('click', load_more);
-    }
-})
 
 
 
@@ -195,9 +198,6 @@ window.onload = () => {
 
     let skills_title_obs, target_skills;
     observe_all(skills_title_obs, target_skills, '.skills_title', options, 'skills_left_trans');
-
-    // let observer_sertificate_title, target_sertificate_title;
-    // observe_all(observer_sertificate_title, target_sertificate_title, '.sertificate_title', options, 'sert_title_animation');
 
     let observer_sertificate, target_sertificate;
     observe_all(observer_sertificate, target_sertificate, '.sert_img', options, 'sert_img_animation');

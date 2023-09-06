@@ -72,6 +72,8 @@ body {
 
     &:hover {
         box-shadow: 0 0 5px 2px $black_color;
+        opacity: .8;
+        transform: translateY(-1px);
     }
 }
 

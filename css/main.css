@@ -1273,6 +1273,8 @@ body {
 }
 .btn:hover {
   box-shadow: 0 0 5px 2px #171718;
+  opacity: 0.8;
+  transform: translateY(-1px);
 }
 
 .header {
