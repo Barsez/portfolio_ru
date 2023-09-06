@@ -96,10 +96,10 @@ const arrProjectsPath = [
     'img/proj_big/burger_proj.jpg',
     'img/proj_big/aperture_proj.jpg',
     'img/proj_big/concept_proj.jpg',
-    'img/proj_big/testspeed_proj.png',
+    'img/proj_big/keyboard.jpg',
     'img/proj_big/freeapp_proj.png',
     'img/proj_big/apple_proj.png',
-    'img/proj_big/google.png',
+    'img/proj_big/google_proj.png',
 ];
 
 const arrDescriptions = [
