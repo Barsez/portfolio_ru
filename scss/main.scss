@@ -5,6 +5,7 @@
 @import 'skils';
 @import 'contacts';
 @import 'about';
+@import 'projects_section';
 
 
 
@@ -72,10 +73,6 @@ body {
     &:hover {
         box-shadow: 0 0 5px 2px $black_color;
     }
-
-    // @media(max-width: 800px) {
-    //     box-shadow: 0 0 5px 2px $black_color;
-    // }
 }
 
 
@@ -613,7 +610,6 @@ body {
 
                 &:hover {
                     opacity: 1;
-                    transform: scale(.9);
                 }
 
                 &:active {
@@ -629,8 +625,6 @@ body {
             text-align: center;
             opacity: .6;
             transition: all .1s linear;
-
-
             @media(max-width: 400px) {
                 font-size: 15px;
             }
@@ -660,7 +654,6 @@ body {
     }
 
 }
-
 
 // прижимаем футер к низу
 

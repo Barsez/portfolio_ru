@@ -1566,7 +1566,6 @@ body {
 }
 .footer .footer_wrapper .socials_wrapper .social:hover {
   opacity: 1;
-  transform: scale(0.9);
 }
 .footer .footer_wrapper .socials_wrapper .social:active {
   top: 2px;
