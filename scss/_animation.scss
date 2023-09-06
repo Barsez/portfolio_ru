@@ -145,7 +145,6 @@
 }
 
 
-
 // nav_list underline
 
 .nav_list--active::before {
@@ -198,130 +197,6 @@
         filter: blur(5px);
         transform: translateY(250px) rotate(360deg) ;
         opacity: 0;
-    }
-}
-
-
-// projects 
-
-
-.show_projects_side {
-    animation: proj_side 3s linear forwards;
-}
-
-@keyframes proj_side {
-    0% {
-        top: 300px;
-    }
-
-    100% {
-        opacity: 1;
-
-    }
-}
-
-
-
-// card animation
-
-.card_back {
-    overflow: hidden;
-
-    .project_image {
-        animation: proj_image_anim 1s linear forwards;
-    }
-
-    #some_text {
-        transform: rotateY(180deg);
-        animation: card_back_anim 1s linear forwards;
-    }
-
-    .project_title {
-        transform: rotateY(180deg);
-    }
-}
-
-@keyframes proj_image_anim {
-    0% {}
-
-    50% {
-        height: 350px;
-    }
-
-    100% {
-        height: 0;
-        opacity: 0;
-    }
-}
-
-@keyframes card_back_anim {
-    0% {}
-
-    50% {
-        height: 0;
-    }
-
-    100% {
-        height: 350px;
-    }
-}
-
-.card_rotate_180_right {
-    transition: 1s linear;
-    transform: rotateY(-220deg);
-}
-
-.card_rotate_180_left {
-    transition: 1s linear;
-    transform: rotateY(220deg);
-}
-
-.card_rotate_360 {
-    transition: 1s linear;
-    transform: rotateY(0deg);
-}
-
-.project1_animation {
-    animation: proj_anim 1s ease-out forwards;
-
-    @media(max-width: 800px) {
-        animation: none;
-    }
-}
-
-.project2_animation {
-    animation: proj_anim2 1s ease-out forwards;
-
-    @media(max-width: 800px) {
-        animation: none;
-    }
-}
-
-@keyframes proj_anim {
-    0% {
-        transform: translateX(-280px);
-    }
-
-    75% {
-        transform: translateX(100px);
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes proj_anim2 {
-    0% {
-        transform: translateX(280px);
-    }
-
-    75% {
-        transform: translateX(-100px);
-    }
-
-    100% {
-        opacity: 1;
     }
 }
 
@@ -554,20 +429,4 @@
 .contacts_title,
 .about_title {
     animation: proj_anim 1s 1s ease-out forwards;
-}
-
-
-// project page
-
-@keyframes opacity_change_infinite {
-    0% {
-        opacity: .1;
-    }
-    50% {
-        opacity: .5;
-        
-    }
-    100% {
-        opacity: .1;
-    }
 }
