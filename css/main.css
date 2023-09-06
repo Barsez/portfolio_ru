@@ -1466,29 +1466,7 @@ body {
 }
 
 .sertificate {
-  padding-bottom: 60px;
-}
-.sertificate .sertificate_title {
-  opacity: 0;
-  text-align: center;
-  font-size: 60px;
-  line-height: 130%;
-  margin: 60px auto 120px;
-  text-transform: uppercase;
-  font-family: "DMSans";
-  font-weight: 700;
-  color: rgb(0, 67, 201);
-}
-@media (max-width: 600px) {
-  .sertificate .sertificate_title {
-    font-size: 40px;
-  }
-}
-@media (max-width: 400px) {
-  .sertificate .sertificate_title {
-    font-size: 30px;
-    margin: 0 auto 60px;
-  }
+  padding: 60px 0;
 }
 .sertificate .sertificate_block {
   display: flex;

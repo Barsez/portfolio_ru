@@ -278,26 +278,26 @@ body {
 // sertificate
 
 .sertificate {
-    padding-bottom: 60px;
+    padding: 60px 0;
 
-    .sertificate_title {
-        opacity: 0;
-        text-align: center;
-        font-size: 60px;
-        line-height: 130%;
-        margin: 60px auto 120px;
-        text-transform: uppercase;
-        @include font($dmsans, $bold, $blue_color);
+    // .sertificate_title {
+    //     opacity: 0;
+    //     text-align: center;
+    //     font-size: 60px;
+    //     line-height: 130%;
+    //     margin: 60px auto 120px;
+    //     text-transform: uppercase;
+    //     @include font($dmsans, $bold, $blue_color);
 
-        @media(max-width: 600px) {
-            font-size: 40px;
-        }
+    //     @media(max-width: 600px) {
+    //         font-size: 40px;
+    //     }
 
-        @media(max-width: 400px) {
-            font-size: 30px;
-            margin: 0 auto 60px;
-        }
-    }
+    //     @media(max-width: 400px) {
+    //         font-size: 30px;
+    //         margin: 0 auto 60px;
+    //     }
+    // }
 
     .sertificate_block {
         display: flex;

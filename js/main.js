@@ -196,8 +196,8 @@ window.onload = () => {
     let skills_title_obs, target_skills;
     observe_all(skills_title_obs, target_skills, '.skills_title', options, 'skills_left_trans');
 
-    let observer_sertificate_title, target_sertificate_title;
-    observe_all(observer_sertificate_title, target_sertificate_title, '.sertificate_title', options, 'sert_title_animation');
+    // let observer_sertificate_title, target_sertificate_title;
+    // observe_all(observer_sertificate_title, target_sertificate_title, '.sertificate_title', options, 'sert_title_animation');
 
     let observer_sertificate, target_sertificate;
     observe_all(observer_sertificate, target_sertificate, '.sert_img', options, 'sert_img_animation');
