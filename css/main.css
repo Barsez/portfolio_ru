@@ -456,6 +456,7 @@ ul {
   text-align-last: center;
   margin-top: 50px;
   color: rgb(0, 67, 201);
+  text-transform: uppercase;
 }
 @media (max-width: 530px) {
   .project_page_container .projects_title {
@@ -606,7 +607,7 @@ ul {
   max-width: 580px;
   text-align: center;
   margin: 0 auto 60px;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
 }
 @media (max-width: 1100px) {
