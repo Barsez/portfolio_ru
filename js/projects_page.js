@@ -174,10 +174,11 @@ function is_slider_project() {
         project_link.href = Object.values(arrNameProject[i]);
         project_page_description.textContent = arrDescriptions[i];
 
+        is_blur(proj_slider_center, 500);
         is_blur(proj_slider_right, 500);
         is_blur(proj_slider_left, 500);
         
-        },3000)
+        },5000)
     };
     is_interval_tic();
 
