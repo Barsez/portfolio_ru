@@ -728,37 +728,56 @@ ul {
 }
 .contacts .contacts_wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  max-width: 350px;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 600px;
   margin: 0 auto;
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .contacts .contacts_wrapper {
-    max-width: 270px;
+    gap: 50px;
   }
+}
+@media (max-width: 800px) {
+  .contacts .contacts_wrapper {
+    max-width: 400px;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+  }
+  .contacts .contacts_wrapper div h2 {
+    margin: 0 auto;
+  }
+}
+.contacts .contacts_wrapper div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 .contacts .contacts_wrapper .location,
 .contacts .contacts_wrapper .telegram,
-.contacts .contacts_wrapper .mail_title {
+.contacts .contacts_wrapper .mail_title,
+.contacts .contacts_wrapper .phone {
   font-size: 30px;
   letter-spacing: 2px;
   font-weight: 400;
-  position: relative;
   transition: 0.2s linear;
   color: rgb(0, 67, 201);
   opacity: 0.6;
 }
 .contacts .contacts_wrapper .location:hover,
 .contacts .contacts_wrapper .telegram:hover,
-.contacts .contacts_wrapper .mail_title:hover {
+.contacts .contacts_wrapper .mail_title:hover,
+.contacts .contacts_wrapper .phone:hover {
   opacity: 1;
 }
 @media (max-width: 600px) {
   .contacts .contacts_wrapper .location,
   .contacts .contacts_wrapper .telegram,
-  .contacts .contacts_wrapper .mail_title {
+  .contacts .contacts_wrapper .mail_title,
+  .contacts .contacts_wrapper .phone {
     font-size: 28px;
   }
 }
@@ -766,19 +785,20 @@ ul {
   margin-bottom: 10px;
 }
 .contacts .contacts_wrapper .location_text,
-.contacts .contacts_wrapper .phone,
-.contacts .contacts_wrapper .mail_text {
+.contacts .contacts_wrapper .phone_text,
+.contacts .contacts_wrapper .mail_text,
+.contacts .contacts_wrapper .telegram_text {
   text-align: center;
   font-weight: 700;
-  margin: 10px 0 30px;
   transition: all 0.2s linear;
   font-size: 24px;
   transition: 0.2s ease-out;
   position: relative;
 }
 .contacts .contacts_wrapper .location_text img,
-.contacts .contacts_wrapper .phone img,
-.contacts .contacts_wrapper .mail_text img {
+.contacts .contacts_wrapper .phone_text img,
+.contacts .contacts_wrapper .mail_text img,
+.contacts .contacts_wrapper .telegram_text img {
   position: absolute;
   right: -30px;
   top: 20%;
@@ -787,26 +807,26 @@ ul {
   transition: all 0.2s linear;
 }
 .contacts .contacts_wrapper .location_text:hover img,
-.contacts .contacts_wrapper .phone:hover img,
-.contacts .contacts_wrapper .mail_text:hover img {
+.contacts .contacts_wrapper .phone_text:hover img,
+.contacts .contacts_wrapper .mail_text:hover img,
+.contacts .contacts_wrapper .telegram_text:hover img {
   opacity: 1;
   transform: translateX(30px);
 }
 .contacts .contacts_wrapper .location_text:hover,
-.contacts .contacts_wrapper .phone:hover,
-.contacts .contacts_wrapper .mail_text:hover {
+.contacts .contacts_wrapper .phone_text:hover,
+.contacts .contacts_wrapper .mail_text:hover,
+.contacts .contacts_wrapper .telegram_text:hover {
   color: red;
   transform: scale(1.1);
 }
 @media (max-width: 600px) {
   .contacts .contacts_wrapper .location_text,
-  .contacts .contacts_wrapper .phone,
-  .contacts .contacts_wrapper .mail_text {
+  .contacts .contacts_wrapper .phone_text,
+  .contacts .contacts_wrapper .mail_text,
+  .contacts .contacts_wrapper .telegram_text {
     font-size: 18px;
   }
-}
-.contacts .contacts_wrapper .mail_text {
-  margin: 0;
 }
 
 .about_me {
@@ -901,7 +921,7 @@ ul {
 }
 
 .projects {
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 }
 .projects .container {
   position: relative;
@@ -1447,6 +1467,7 @@ body {
 .main .container .main_wrapper .main_text {
   font-size: 28px;
   margin-top: 30px;
+  font-weight: 700;
 }
 .main .container .main_wrapper .main_text span {
   display: inline-block;
@@ -1479,7 +1500,7 @@ body {
   opacity: 0;
   text-align: center;
   font-size: 40px;
-  margin: 0 auto 160px;
+  margin: 0 auto 120px;
   text-transform: uppercase;
   font-family: "Gentium";
   font-weight: 700;

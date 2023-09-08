@@ -1,8 +1,10 @@
 .contacts {
     padding: 60px 0 100px;
+
     @media (max-width: 400px) {
         padding: 0 0 60px;
     }
+
     .contacts_title {
         text-align: center;
         margin-bottom: 60px;
@@ -12,9 +14,11 @@
         color: $blue_color;
         letter-spacing: 2.5px;
         opacity: 0;
+
         @media (max-width: 800px) {
             font-size: 40px;
         }
+
         @media (max-width: 600px) {
             font-size: 30px;
             line-height: 1.2;
@@ -23,56 +27,80 @@
 
     .contacts_wrapper {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        
-        max-width: 350px;
+        flex-wrap: wrap;
+        gap: 50px;
+        max-width: 600px;
         margin: 0 auto;
-        @media(max-width: 600px) {
-            max-width: 270px;
+
+        @media(max-width: 1000px) {
+            gap: 50px;
+
+        }
+
+        @media(max-width: 800px) {
+            max-width: 400px;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+
+            div h2 {
+
+                margin: 0 auto;
+
+            }
+        }
+
+        & div {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
         }
 
         .location,
         .telegram,
-        .mail_title {
+        .mail_title,
+        .phone {
             font-size: 30px;
             letter-spacing: 2px;
             font-weight: $regular;
-            position: relative;
             transition: .2s linear;
             color: $blue_color;
             opacity: .6;
+
             &:hover {
                 opacity: 1;
             }
-            
+
             @media(max-width: 600px) {
                 font-size: 28px;
             }
         }
-        
+
         .mail_title {
             margin-bottom: 10px;
-            
+
         }
 
         .location_text,
-        .phone,
-        .mail_text {
+        .phone_text,
+        .mail_text,
+        .telegram_text {
             text-align: center;
             font-weight: $bold;
-            margin: 10px 0 30px;
+            // margin: 10px 0 0;
             transition: all .2s linear;
             font-size: 24px;
             transition: .2s ease-out;
             position: relative;
+
             img {
                 position: absolute;
                 right: -30px;
                 top: 20%;
                 opacity: 0;
-                height: 30px; 
+                height: 30px;
                 transition: all .2s linear;
             }
 
@@ -80,21 +108,22 @@
                 opacity: 1;
                 transform: translateX(30px);
             }
+
             &:hover {
                 color: red;
                 transform: scale(1.1);
             }
-            
-            
+
+
             @media(max-width: 600px) {
                 font-size: 18px;
             }
         }
-        
-        .mail_text {
-            margin: 0;
-        }
-        
+
+        // .mail_text {
+        //     margin: 0;
+        // }
+
 
 
     }
