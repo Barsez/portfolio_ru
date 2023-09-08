@@ -6,11 +6,12 @@
     }
 
     .projects_title {
-        font-size: 40px;
+        font-size: 36px;
         text-align-last: center;
         margin-top: 50px;
         color: $blue_color;
         text-transform: uppercase;
+        font-weight: $regular;
         @media(max-width: 530px) {
             font-size: 30px;
         }
@@ -28,12 +29,17 @@
             cursor: pointer;
             height: 500px;
             width: 400px;
-            opacity: .8;
+            // opacity: .8;
             transition: all 1s ease;
-
             display: flex;
             justify-content: center;
             align-items: center;
+
+            &:hover {
+                transform: rotateY(0);
+                opacity: .9;
+                box-shadow: 0 0 7px 2px #719eff;
+            }
 
             .arrow_left,
             .arrow_right {
@@ -66,12 +72,6 @@
                 transform: rotate(180deg);
             }
 
-            &:hover {
-                transform: rotateY(0);
-                opacity: 1;
-                box-shadow: 0 0 7px 2px #719eff;
-            }
-
             @media(max-width: 1500px) {
                 height: 400px;
                 width: 320px;
@@ -100,7 +100,7 @@
         }
 
         .proj_slider_left {
-            transform: rotateY(10deg);
+            transform: rotateY(30deg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top center;
@@ -146,7 +146,7 @@
         }
 
         .proj_slider_right {
-            transform: rotateY(-10deg);
+            transform: rotateY(-30deg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top center;

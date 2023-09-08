@@ -157,9 +157,17 @@ function is_slider_project() {
 
 
 
+    // slider tik
     function is_interval_tic() {
         setInterval(() => {
-            i++;
+            proj_slider_move_right();
+
+        }, 5000)
+    };
+    is_interval_tic();
+
+    function proj_slider_move_right() {
+        i++;
         j++;
         k++;
         if (i > arrProjectsPath.length - 1) i = 0;
@@ -177,32 +185,11 @@ function is_slider_project() {
         is_blur(proj_slider_center, 500);
         is_blur(proj_slider_right, 500);
         is_blur(proj_slider_left, 500);
-        
-        },5000)
-    };
-    is_interval_tic();
+    }
 
 
     // click 
-    document.querySelector('.proj_slider_right').addEventListener('click', function f() {
-        i++;
-        j++;
-        k++;
-        if (i > arrProjectsPath.length - 1) i = 0;
-        if (j > arrProjectsPath.length - 1) j = 0;
-        if (k > arrProjectsPath.length - 1) k = 0;
-
-        proj_slider_center.style.backgroundImage = `url(${arrProjectsPath[i]})`;
-        this.style.backgroundImage = `url(${arrProjectsPath[j]})`;
-        document.querySelector('.proj_slider_left').style.backgroundImage = `url(${arrProjectsPath[k]})`;
-
-        projects_title.textContent = Object.keys(arrNameProject[i]);
-        project_link.href = Object.values(arrNameProject[i]);
-        project_page_description.textContent = arrDescriptions[i];
-
-        is_blur(proj_slider_right, 500);
-        is_blur(proj_slider_left, 500);
-    })
+    document.querySelector('.proj_slider_right').addEventListener('click', proj_slider_move_right)
 
     document.querySelector('.proj_slider_left').addEventListener('click', function () {
         i--;
@@ -214,18 +201,17 @@ function is_slider_project() {
         else if (k < 0) k = arrProjectsPath.length - 1;
 
         proj_slider_center.style.backgroundImage = `url(${arrProjectsPath[i]})`;
-        this.style.backgroundImage = `url(${arrProjectsPath[k]})`;
-        document.querySelector('.proj_slider_right').style.backgroundImage = `url(${arrProjectsPath[j]})`;
+        proj_slider_left.style.backgroundImage = `url(${arrProjectsPath[k]})`;
+        proj_slider_right.style.backgroundImage = `url(${arrProjectsPath[j]})`;
 
         projects_title.textContent = Object.keys(arrNameProject[i]);
         project_link.href = Object.values(arrNameProject[i]);
         project_page_description.textContent = arrDescriptions[i];
 
+        is_blur(proj_slider_center, 500);
         is_blur(proj_slider_right, 500);
         is_blur(proj_slider_left, 500);
     })
 }
 
 is_slider_project()
-
-
