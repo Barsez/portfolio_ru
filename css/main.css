@@ -252,7 +252,7 @@ ul {
 }
 
 .sert_img_animation {
-  animation: rotate_720 1s linear forwards;
+  animation: just_cont_action 1s linear forwards;
 }
 @media (max-width: 600px) {
   .sert_img_animation {
@@ -464,7 +464,7 @@ ul {
   }
 }
 .project_page_container .project_page_wrapper {
-  padding: 50px 0;
+  padding: 20px 0;
   perspective: 800px;
   display: flex;
   align-items: center;
@@ -562,8 +562,8 @@ ul {
   perspective: 600px;
 }
 .project_page_container .project_page_wrapper a .proj_slider_center {
-  height: 700px;
-  width: 580px;
+  height: 600px;
+  width: 550px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -604,7 +604,7 @@ ul {
   background-position: top center;
 }
 .project_page_container .project_page_description {
-  max-width: 580px;
+  max-width: 700px;
   text-align: center;
   margin: 0 auto 60px;
   font-size: 20px;
@@ -904,7 +904,6 @@ ul {
 }
 .projects .projects_side {
   font-family: "Poppins";
-  font-weight: 700;
   opacity: 0;
   position: absolute;
   left: calc(100% - 200px);
@@ -1079,7 +1078,6 @@ ul {
 .projects .projects_block .proj1 .proj_description {
   max-width: 500px;
   font-size: 24px;
-  font-weight: bold;
   text-align: center;
   opacity: 0;
 }
@@ -1328,7 +1326,7 @@ body {
 .header .nav_list_wrapper ul {
   display: flex;
   gap: 40px;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (max-width: 700px) {
   .header .nav_list_wrapper ul {
@@ -1343,7 +1341,7 @@ body {
 }
 .header .nav_list_wrapper ul li {
   font-family: "Gentium";
-  font-weight: 700;
+  font-weight: 400;
   color: #fff;
   cursor: pointer;
   position: relative;
@@ -1396,7 +1394,6 @@ body {
   }
 }
 .main .container {
-  font-weight: bold;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -1470,6 +1467,28 @@ body {
 
 .sertificate {
   padding: 100px 0 60px;
+}
+.sertificate .sertificate_title {
+  opacity: 0;
+  text-align: center;
+  font-size: 60px;
+  line-height: 130%;
+  margin: 0 auto 160px;
+  text-transform: uppercase;
+  font-family: "DMSans";
+  font-weight: 700;
+  color: rgb(0, 67, 201);
+}
+@media (max-width: 600px) {
+  .sertificate .sertificate_title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .sertificate .sertificate_title {
+    font-size: 30px;
+    margin: 0 auto 60px;
+  }
 }
 .sertificate .sertificate_block {
   display: flex;

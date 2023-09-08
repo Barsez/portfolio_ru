@@ -225,7 +225,7 @@
 }
 
 .sert_img_animation {
-    animation: rotate_720 1s linear forwards;
+    animation: just_cont_action 1s linear forwards;
 
     @media(max-width: 600px) {
         animation: none;

@@ -17,7 +17,7 @@
     }
 
     .project_page_wrapper {
-        padding: 50px 0;
+        padding: 20px 0;
         perspective: 800px;
         display: flex;
         align-items: center;
@@ -111,8 +111,8 @@
             perspective: 600px;
 
             .proj_slider_center {
-                height: 700px;
-                width: 580px;
+                height: 600px;
+                width: 550px;
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: top center;
@@ -155,7 +155,7 @@
     }
 
     .project_page_description {
-        max-width: 580px;
+        max-width: 700px;
         text-align: center;
         margin: 0 auto 60px;
         font-size: 20px;
