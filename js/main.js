@@ -17,6 +17,11 @@ const sun_mode = document.querySelector('.sun_mode');
 const moon_mode = document.querySelector('.moon_mode');
 
 
+document.querySelector('.nav_list_contacts').addEventListener('click', function() {
+    document.querySelector('#contacts').scrollIntoView({behavior: 'smooth'})
+})
+
+
 // preloader
 setTimeout(() => {
     document.querySelector('.preloader').classList.add('preloader_hide')
@@ -201,9 +206,11 @@ window.onload = () => {
     observe_all(skills_title_obs, target_skills, '.skills_title', options, 'skills_left_trans');
     let serteficate_title, target_sert_title;
     observe_all(serteficate_title, target_sert_title, '.sertificate_title', options, 'skills_left_trans');
-
     let observer_sertificate, target_sertificate;
     observe_all(observer_sertificate, target_sertificate, '.sert_img', options, 'sert_img_animation');
+    let observer_cont_title, target_contact_title;
+    observe_all(observer_cont_title, target_contact_title, '.contacts_title', options, 'skills_left_trans');
+
 }
 
 

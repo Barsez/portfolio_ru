@@ -1,17 +1,18 @@
 .skills {
     // border-top: 1px solid $blue_color;
     padding: 60px 0;
-
+    @media(max-width: 400px) {
+        padding: 0 0 60px;
+    }
     .skils_wrapper {
         text-align: center;
 
         .skills_title {
-            font-size: 60px;
-            line-height: 130%;
+            font-size: 40px;
             margin: 0 auto 120px;
             text-transform: uppercase;
             opacity: 0;
-            @include font($dmsans, $bold, $blue_color);
+            @include font($gentium, $bold, $blue_color);
             @media(max-width: 1000px) {
                 transform: translateX(-400px);
             }
@@ -26,6 +27,7 @@
             @media(max-width: 400px) {
                 font-size: 30px;
                 transform: translateX(-100px);
+                margin: 0 auto 60px;
             }
         }
         .skills_list_wrapper {

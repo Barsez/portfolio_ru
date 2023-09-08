@@ -20,6 +20,8 @@ const projects_title = document.querySelector('.projects_title');
 const sun_mode = document.querySelector('.sun_mode');
 const moon_mode = document.querySelector('.moon_mode');
 
+
+
 // preloader
 setTimeout(() => {
     document.querySelector('.preloader').classList.add('preloader_hide')

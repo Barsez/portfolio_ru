@@ -280,19 +280,16 @@ body {
 
 .sertificate {
     padding: 100px 0 60px;
-
+    @media(max-width: 400px) {
+        padding: 0 0 60px;
+    }
     .sertificate_title {
         opacity: 0;
         text-align: center;
-        font-size: 60px;
-        line-height: 130%;
+        font-size: 40px;
         margin: 0 auto 160px;
         text-transform: uppercase;
-        @include font($dmsans, $bold, $blue_color);
-
-        @media(max-width: 600px) {
-            font-size: 40px;
-        }
+        @include font($gentium, $bold, $blue_color);
 
         @media(max-width: 400px) {
             font-size: 30px;
