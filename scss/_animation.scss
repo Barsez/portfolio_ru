@@ -14,7 +14,7 @@
         display: block;
         width: 100px;
         height: 100px;
-        animation: iconRotate 2s linear infinite;
+        animation: iconRotate 1s linear infinite;
     }
 }
 
@@ -28,16 +28,6 @@
     100% {
         height: 0;
     }
-}
-
-// logo
-
-.logo {
-    animation: logo_active_filter 5s linear infinite;
-}
-
-.logo_active {
-    animation: logo_rotate 1s ease forwards;
 }
 
 // menu mobile
@@ -75,6 +65,11 @@
 }
 
 
+// logo
+
+.logo {
+    animation: logo_active_filter 5s linear infinite;
+}
 @keyframes logo_active_filter {
     25% {}
 
@@ -91,29 +86,13 @@
     100% {}
 }
 
-@keyframes logo_rotate {
-    0% {}
-
-    25% {
-        transform: rotateX(360deg) rotateY(1deg) scale(2);
-    }
-
-    75% {
-        transform: rotateX(360deg) rotateY(1deg) scale(2);
-    }
-
-    100% {
-        transform: rotateX(720deg) rotateY(0deg);
-    }
-}
-
 
 // nav_list animation
 
 .nav_list_wrapper {
     ul {
-        // opacity: 0;
-        // animation: animation_move_down 1s ease-out forwards;
+        opacity: 0;
+        animation: animation_move_down .5s 1s ease-out forwards;
         li {
             &:active {
                 top: 1px;

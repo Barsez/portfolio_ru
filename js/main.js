@@ -25,7 +25,7 @@ document.querySelector('.nav_list_contacts').addEventListener('click', function(
 // preloader
 setTimeout(() => {
     document.querySelector('.preloader').classList.add('preloader_hide')
-}, 700);
+}, 500);
 
 
 

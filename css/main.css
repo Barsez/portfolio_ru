@@ -108,7 +108,7 @@ ul {
   display: block;
   width: 100px;
   height: 100px;
-  animation: iconRotate 2s linear infinite;
+  animation: iconRotate 1s linear infinite;
 }
 
 .preloader_hide {
@@ -120,14 +120,6 @@ ul {
     height: 0;
   }
 }
-.logo {
-  animation: logo_active_filter 5s linear infinite;
-}
-
-.logo_active {
-  animation: logo_rotate 1s ease forwards;
-}
-
 .menu_mobile_scale {
   animation: scale_15 0.2s linear forwards;
 }
@@ -150,6 +142,10 @@ ul {
     opacity: 1;
   }
 }
+.logo {
+  animation: logo_active_filter 5s linear infinite;
+}
+
 @keyframes logo_active_filter {
   50% {
     filter: blur(3px);
@@ -159,16 +155,9 @@ ul {
     filter: blur(20px);
   }
 }
-@keyframes logo_rotate {
-  25% {
-    transform: rotateX(360deg) rotateY(1deg) scale(2);
-  }
-  75% {
-    transform: rotateX(360deg) rotateY(1deg) scale(2);
-  }
-  100% {
-    transform: rotateX(720deg) rotateY(0deg);
-  }
+.nav_list_wrapper ul {
+  opacity: 0;
+  animation: animation_move_down 0.5s 1s ease-out forwards;
 }
 .nav_list_wrapper ul li:active {
   top: 1px;

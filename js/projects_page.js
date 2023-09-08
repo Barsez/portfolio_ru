@@ -71,13 +71,13 @@ if (localStorage.getItem('darkMode') === 'dark') {
 
 
 // ab_icon up move
-ab_icon.addEventListener('click', function () {
-    document.querySelector('.header').scrollIntoView({ behavior: "smooth" });
-    ab_icon.classList.add('ab_icon_rotate');
-    setTimeout(() => {
-        this.classList.remove('ab_icon_rotate')
-    }, 1000);
-})
+// ab_icon.addEventListener('click', function () {
+//     document.querySelector('.header').scrollIntoView({ behavior: "smooth" });
+//     ab_icon.classList.add('ab_icon_rotate');
+//     setTimeout(() => {
+//         this.classList.remove('ab_icon_rotate')
+//     }, 1000);
+// })
 
 
 
