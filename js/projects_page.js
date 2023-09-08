@@ -155,8 +155,35 @@ function is_slider_project() {
     project_link.href = Object.values(arrNameProject[i]);
     project_page_description.textContent = arrDescriptions[i];
 
+
+
+    function is_interval_tic() {
+        setInterval(() => {
+            i++;
+        j++;
+        k++;
+        if (i > arrProjectsPath.length - 1) i = 0;
+        if (j > arrProjectsPath.length - 1) j = 0;
+        if (k > arrProjectsPath.length - 1) k = 0;
+
+        proj_slider_center.style.backgroundImage = `url(${arrProjectsPath[i]})`;
+        proj_slider_right.style.backgroundImage = `url(${arrProjectsPath[j]})`;
+        proj_slider_left.style.backgroundImage = `url(${arrProjectsPath[k]})`;
+
+        projects_title.textContent = Object.keys(arrNameProject[i]);
+        project_link.href = Object.values(arrNameProject[i]);
+        project_page_description.textContent = arrDescriptions[i];
+
+        is_blur(proj_slider_right, 500);
+        is_blur(proj_slider_left, 500);
+        
+        },3000)
+    };
+    is_interval_tic();
+
+
     // click 
-    document.querySelector('.proj_slider_right').addEventListener('click', function () {
+    document.querySelector('.proj_slider_right').addEventListener('click', function f() {
         i++;
         j++;
         k++;
