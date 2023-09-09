@@ -434,9 +434,14 @@ ul {
   text-transform: uppercase;
   font-weight: 400;
 }
+@media (max-width: 1200px) {
+  .project_page_container .projects_title {
+    font-size: 32px;
+  }
+}
 @media (max-width: 530px) {
   .project_page_container .projects_title {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 .project_page_container .project_page_wrapper {
@@ -742,6 +747,10 @@ ul {
   .contacts .contacts_wrapper div {
     width: auto;
   }
+}
+.contacts .contacts_wrapper .phone_wrap,
+.contacts .contacts_wrapper .mail_wrap {
+  align-items: end;
 }
 .contacts .contacts_wrapper .location,
 .contacts .contacts_wrapper .telegram,
