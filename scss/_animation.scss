@@ -211,17 +211,6 @@
     }
 }
 
-@keyframes rotate_720 {
-    0% {
-        transform: rotate(720deg) scale(0);
-        filter: blur(20px);
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 // pseudo line header
 .pseudo_line_header {
     position: relative;
@@ -235,7 +224,7 @@
     left: 0;
     bottom: 0;
     background-color: $blue_color;
-    animation: line 3s ease forwards;
+    animation: line 3s ease-in forwards;
 }
 
 
@@ -252,7 +241,7 @@
     left: 0;
     top: 0;
     background-color: $blue_color;
-    animation: line 3s ease forwards;
+    animation: line 3s ease-in forwards;
 }
 
 @keyframes line {

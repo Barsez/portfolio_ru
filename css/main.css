@@ -249,15 +249,6 @@ ul {
   }
 }
 
-@keyframes rotate_720 {
-  0% {
-    transform: rotate(720deg) scale(0);
-    filter: blur(20px);
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .pseudo_line_header {
   position: relative;
 }
@@ -269,7 +260,7 @@ ul {
   left: 0;
   bottom: 0;
   background-color: rgb(0, 67, 201);
-  animation: line 3s ease forwards;
+  animation: line 3s ease-in forwards;
 }
 
 .pseudo_line_footer {
@@ -283,7 +274,7 @@ ul {
   left: 0;
   top: 0;
   background-color: rgb(0, 67, 201);
-  animation: line 3s ease forwards;
+  animation: line 3s ease-in forwards;
 }
 
 @keyframes line {
@@ -718,7 +709,7 @@ ul {
 .contacts .contacts_wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   gap: 50px;
   max-width: 600px;
@@ -735,6 +726,7 @@ ul {
     flex-direction: column;
     gap: 30px;
     justify-content: center;
+    align-items: center;
   }
   .contacts .contacts_wrapper div h2 {
     margin: 0 auto;
@@ -744,6 +736,12 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: start;
+  width: 260px;
+}
+@media (max-width: 800px) {
+  .contacts .contacts_wrapper div {
+    width: auto;
+  }
 }
 .contacts .contacts_wrapper .location,
 .contacts .contacts_wrapper .telegram,
@@ -769,9 +767,6 @@ ul {
   .contacts .contacts_wrapper .phone {
     font-size: 28px;
   }
-}
-.contacts .contacts_wrapper .mail_title {
-  margin-bottom: 10px;
 }
 .contacts .contacts_wrapper .location_text,
 .contacts .contacts_wrapper .phone_text,
@@ -830,6 +825,7 @@ ul {
   color: rgb(0, 67, 201);
   letter-spacing: 2.5px;
   opacity: 0;
+  animation: proj_anim 1s 1s ease-out forwards;
 }
 @media (max-width: 800px) {
   .about_me .about_title {

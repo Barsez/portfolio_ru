@@ -9,6 +9,7 @@
         color: $blue_color;
         letter-spacing: 2.5px;
         opacity: 0;
+        animation: proj_anim 1s 1s ease-out forwards;
         @media (max-width: 800px) {
             font-size: 40px;
         }
