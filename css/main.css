@@ -760,7 +760,6 @@ ul {
 .contacts .contacts_wrapper .telegram_text img {
   position: absolute;
   right: -30px;
-  top: 20%;
   opacity: 0;
   height: 30px;
   transition: all 0.2s linear;
@@ -1229,10 +1228,10 @@ body {
   padding: 12px 20px;
   font-size: 20px;
   line-height: 24px;
-  font-family: "Gentium";
   font-weight: 700;
-  color: #171718;
+  font-family: "Gentium";
   transition: all 0.1s linear;
+  opacity: 0.8;
 }
 @media (max-width: 400px) {
   .btn {
@@ -1244,12 +1243,11 @@ body {
 }
 .btn:active {
   position: relative;
-  top: 2px;
+  top: 1px;
 }
 .btn:hover {
   box-shadow: 0 0 5px 2px #171718;
-  opacity: 0.8;
-  transform: translateY(-1px);
+  opacity: 1;
 }
 
 .header {
@@ -1467,34 +1465,32 @@ body {
   }
 }
 .sertificate .sertificate_block {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  align-items: center;
-}
-.sertificate .sertificate_block .sert_img {
   opacity: 0;
+  display: block;
   max-width: 700px;
-  cursor: pointer;
-  overflow: hidden;
-  border: 1px solid #c7c7c7;
+  margin: 0 auto;
+  transition: box-shadow 0.2s linear;
+}
+.sertificate .sertificate_block:hover {
+  box-shadow: 0 0 7px 2px #719eff;
 }
 @media (max-width: 600px) {
-  .sertificate .sertificate_block .sert_img {
+  .sertificate .sertificate_block {
     opacity: 1;
   }
+}
+.sertificate .sertificate_block .sert_img {
+  width: 100%;
+  overflow: hidden;
 }
 .sertificate .sertificate_block .sert_img img {
   object-fit: cover;
   object-position: center;
   display: block;
-  transition: all 0.5s linear;
+  transition: all 1s linear;
 }
 .sertificate .sertificate_block .sert_img img:hover {
   transform: scale(1.1);
-}
-.sertificate .sertificate_block a img {
-  height: 20px;
 }
 
 .footer {

@@ -46,8 +46,10 @@ body {
     font-size: 20px;
     line-height: 24px;
     // text-transform: uppercase;
-    @include font($gentium, $bold);
+    font-weight: $bold;
+    font-family: $gentium;
     transition: all .1s linear;
+    opacity: .8;
 
     @media (max-width: 400px) {
         padding: 6px 10px;
@@ -59,13 +61,12 @@ body {
 
     &:active {
         position: relative;
-        top: 2px;
+        top: 1px;
     }
 
     &:hover {
         box-shadow: 0 0 5px 2px $black_color;
-        opacity: .8;
-        transform: translateY(-1px);
+        opacity: 1;
     }
 }
 
@@ -290,40 +291,31 @@ body {
     }
 
     .sertificate_block {
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-        align-items: center;
-
+        opacity: 0;
+        display: block;
+        max-width: 700px;
+        margin: 0 auto;
+        transition: box-shadow .2s linear;
+        &:hover {
+            box-shadow: 0 0 7px 2px #719eff;
+        }
+        @media(max-width: 600px) {
+            opacity: 1;
+        }
         .sert_img {
-            opacity: 0;
-            max-width: 700px;
-            cursor: pointer;
+            width: 100%;
             overflow: hidden;
-            border: 1px solid #c7c7c7;
-
-            @media(max-width: 600px) {
-                opacity: 1;
-            }
-
             img {
                 // height: 100%;
                 object-fit: cover;
                 object-position: center;
                 display: block;
-                transition: all .5s linear;
+                transition: all 1s linear;
 
                 &:hover {
                     transform: scale(1.1);
                 }
             }
-        }
-
-        a {
-            img {
-                height: 20px;
-            }
-
         }
     }
 }

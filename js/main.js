@@ -207,7 +207,7 @@ window.onload = () => {
     let serteficate_title, target_sert_title;
     observe_all(serteficate_title, target_sert_title, '.sertificate_title', options, 'skills_left_trans');
     let observer_sertificate, target_sertificate;
-    observe_all(observer_sertificate, target_sertificate, '.sert_img', options, 'sert_img_animation');
+    observe_all(observer_sertificate, target_sertificate, '.sertificate_block', options, 'sert_img_animation');
     let observer_cont_title, target_contact_title;
     observe_all(observer_cont_title, target_contact_title, '.contacts_title', options, 'skills_left_trans');
 
