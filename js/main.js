@@ -17,15 +17,19 @@ const sun_mode = document.querySelector('.sun_mode');
 const moon_mode = document.querySelector('.moon_mode');
 
 
-document.querySelector('.nav_list_contacts').addEventListener('click', function() {
-    document.querySelector('#contacts').scrollIntoView({behavior: 'smooth'})
+document.querySelector('.nav_list_contacts').addEventListener('click', function () {
+    document.querySelector('#contacts').scrollIntoView({ behavior: 'smooth' })
 })
 
 
 // preloader
-setTimeout(() => {
-    document.querySelector('.preloader').classList.add('preloader_hide')
-}, 500);
+
+window.addEventListener('load', function () {
+    setTimeout(() => {
+        document.querySelector('.preloader').classList.add('preloader_hide')
+    }, 500);
+});
+
 
 
 
@@ -109,24 +113,24 @@ ab_icon.addEventListener('click', function () {
 // dark mode in local storage
 
 btnDarkMode.addEventListener('click', function () {
-    document.querySelector('.preloader').classList.remove('preloader_hide')
+    document.querySelector('.bg_mode').classList.add('change_bg');
     setTimeout(() => {
-        document.querySelector('.preloader').classList.add('preloader_hide');
+        document.querySelector('.bg_mode').classList.remove('change_bg');
+    }, 1000);
 
-        this.classList.toggle('dark_mode_btn--active');
-        body.classList.toggle('dark_mode');
-        main.classList.toggle('main_dark');
+    this.classList.toggle('dark_mode_btn--active');
+    body.classList.toggle('dark_mode');
+    main.classList.toggle('main_dark');
 
-        if (body.classList.contains('dark_mode')) {
-            localStorage.setItem('darkMode', 'dark');
-            moon_mode.style.display = 'block';
-            sun_mode.style.display = 'none';
-        } else {
-            localStorage.setItem('darkMode', 'light');
-            moon_mode.style.display = 'none';
-            sun_mode.style.display = 'block';
-        }
-    }, 200)
+    if (body.classList.contains('dark_mode')) {
+        localStorage.setItem('darkMode', 'dark');
+        moon_mode.style.display = 'block';
+        sun_mode.style.display = 'none';
+    } else {
+        localStorage.setItem('darkMode', 'light');
+        moon_mode.style.display = 'none';
+        sun_mode.style.display = 'block';
+    }
 
 })
 
