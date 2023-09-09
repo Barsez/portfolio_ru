@@ -1,25 +1,4 @@
 @font-face {
-  font-family: "DMSans";
-  src: url("../fonts/DMSans-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "DMSans";
-  src: url("../fonts/DMSans-Medium.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "DMSans";
-  src: url("../fonts/DMSans-Bold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-Regular.ttf") format("truetype");
   font-style: normal;
@@ -286,7 +265,6 @@ ul {
   }
 }
 .dark_mode_btn {
-  perspective: 300px;
   width: 50px;
   height: 50px;
   background-color: #171718;
@@ -304,6 +282,9 @@ ul {
 .dark_mode_btn:hover {
   opacity: 0.7;
 }
+.dark_mode_btn:active {
+  transform: translateY(1px);
+}
 @media (max-width: 1200px) {
   .dark_mode_btn {
     right: 10px;
@@ -315,21 +296,6 @@ ul {
   .dark_mode_btn {
     width: 20px;
     height: 20px;
-  }
-}
-.dark_mode_btn .dark_mode_text {
-  position: absolute;
-  color: rgb(0, 67, 201);
-  font-size: 14px;
-  line-height: 1;
-  font-weight: bold;
-  top: -40px;
-  animation: iconRotate 7s 2s linear infinite;
-}
-@media (max-width: 700px) {
-  .dark_mode_btn .dark_mode_text {
-    font-size: 10px;
-    top: -30px;
   }
 }
 .dark_mode_btn .dark_mode_btn_icon {
@@ -389,10 +355,10 @@ ul {
 }
 
 .ab_icon_rotate {
-  animation: iconRotate 1s forwards;
+  animation: rotateY_360 1s forwards;
 }
 
-@keyframes iconRotate {
+@keyframes rotateY_360 {
   100% {
     transform: rotateY(360deg);
   }
@@ -782,9 +748,9 @@ ul {
 .contacts .contacts_wrapper .mail_text,
 .contacts .contacts_wrapper .telegram_text {
   text-align: center;
-  font-weight: 700;
+  font-family: "Poppins";
   transition: all 0.2s linear;
-  font-size: 24px;
+  font-size: 18px;
   transition: 0.2s ease-out;
   position: relative;
 }
@@ -1246,12 +1212,6 @@ body {
   letter-spacing: -0.5px;
 }
 
-.content_wrapper {
-  width: 1920px;
-  margin: 0 auto;
-  position: relative;
-}
-
 .container {
   max-width: 1200px;
   padding: 0 10px;
@@ -1588,17 +1548,15 @@ body {
   top: 2px;
 }
 .footer .footer_wrapper .rights {
-  line-height: 150%;
-  font-family: "DMSans";
+  font-family: "Poppins";
   font-weight: 400;
   color: #fff;
-  text-align: center;
   opacity: 0.6;
-  transition: all 0.1s linear;
+  transition: 0.2s linear;
 }
 @media (max-width: 400px) {
   .footer .footer_wrapper .rights {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 .footer .footer_wrapper .rights:hover {
@@ -1609,7 +1567,7 @@ body {
   height: 30px;
   position: absolute;
   top: calc(50% - 15px);
-  left: 170px;
+  left: 180px;
   transition: transform 0.2s linear;
 }
 @media (max-width: 400px) {

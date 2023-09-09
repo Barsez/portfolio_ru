@@ -257,7 +257,6 @@
 
 // dark mode
 .dark_mode_btn {
-    perspective: 300px;
     width: 50px;
     height: 50px;
     background-color: $black_color;
@@ -274,6 +273,9 @@
     &:hover {
         opacity: .7;
     }
+    &:active {
+        transform: translateY(1px);
+    }
     @media(max-width: 1200px) {
         right: 10px;
         width: 40px;
@@ -282,21 +284,6 @@
     @media(max-width: 700px) {
         width: 20px;
         height: 20px;
-    }
-    
-
-    .dark_mode_text {
-        position: absolute;
-        color: $blue_color;
-        font-size: 14px;
-        line-height: 1;
-        font-weight: bold;
-        top: -40px;
-        animation: iconRotate 7s 2s linear infinite;
-        @media(max-width: 700px) {
-            font-size: 10px;
-            top: -30px;
-        }
     }
 
     .dark_mode_btn_icon {
@@ -308,7 +295,6 @@
         @media(max-width: 700px) {
             width: 16px;
         }
-        // animation: rotate_sun 20s linear infinite;  
     }
     .moon_mode {
         display: none;
@@ -352,10 +338,10 @@
 }
 
 .ab_icon_rotate {
-    animation: iconRotate 1s forwards;
+    animation: rotateY_360 1s forwards;
 }
 
-@keyframes iconRotate {
+@keyframes rotateY_360 {
     0% {}
 
     100% {
