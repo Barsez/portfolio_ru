@@ -165,7 +165,7 @@ function is_slider_project() {
         setInterval(() => {
             proj_slider_move_right();
 
-        }, 5000)
+        }, 8000)
     };
     is_interval_tic();
 
